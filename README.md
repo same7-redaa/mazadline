@@ -1,20 +1,81 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# Mazad Line - موقع مزاد لاين
 
-# Run and deploy your AI Studio app
+🏗️ موقع شركة متخصصة في توريد مواد العزل الحراري والصوتي ومستلزمات التكييف HVAC
 
-This contains everything you need to run your app locally.
+## 🌟 المميزات
 
-View your app in AI Studio: https://ai.studio/apps/drive/1sstwvwxLenlDDZJrTgXsazT9LkD4hZNc
+- ✨ تصميم عصري وأنيق بأسلوب هندسي حاد
+- 📱 متجاوب بالكامل مع جميع الأجهزة
+- 🎨 ألوان برتقالية احترافية
+- ⚡ أداء سريع مع Vite + React + TypeScript
+- 🎭 رسوم متحركة سلسة
+- 📄 صفحة كتالوج منفصلة للمنتجات
+- 🔍 نظام عرض Grid و List للمنتجات
 
-## Run Locally
+## 🚀 التقنيات المستخدمة
 
-**Prerequisites:**  Node.js
+- **React 18** - مكتبة واجهة المستخدم
+- **TypeScript** - لغة برمجة قوية
+- **Vite** - أداة بناء سريعة
+- **Tailwind CSS** - إطار عمل CSS
+- **Lucide Icons** - مكتبة الأيقونات
 
+## 📦 التثبيت والتشغيل
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### المتطلبات
+- Node.js 16+
+
+### خطوات التشغيل
+
+```bash
+# 1. استنساخ المشروع
+git clone https://github.com/same7-redaa/mazadline.git
+
+# 2. الدخول للمجلد
+cd mazadline
+
+# 3. تثبيت الحزم
+npm install
+
+# 4. تشغيل المشروع
+npm run dev
+
+# 5. بناء المشروع للإنتاج
+npm run build
+```
+
+الموقع سيعمل على: `http://localhost:3000`
+
+## 🌐 النشر على Vercel
+
+1. اذهب إلى [Vercel.com](https://vercel.com)
+2. سجل دخول بحساب GitHub
+3. اضغط "New Project"
+4. اختر repository: `same7-redaa/mazadline`
+5. اضغط "Deploy"
+
+## 📁 هيكل المشروع
+
+```
+mazad-line/
+├── components/          # المكونات الرئيسية
+│   ├── Navbar.tsx      # شريط التنقل
+│   ├── Hero.tsx        # القسم الرئيسي
+│   ├── About.tsx       # من نحن
+│   ├── Products.tsx    # المنتجات
+│   ├── Services.tsx    # الخدمات
+│   └── Contact.tsx     # تواصل معنا
+├── pages/              # الصفحات
+│   └── CatalogPage.tsx # صفحة الكتالوج
+└── App.tsx            # التطبيق الرئيسي
+```
+
+## 📱 التواصل
+
+- 📞 الهاتف: +966 12 345 6789
+- 📧 البريد: sales@mazadline.com
+- 📍 العنوان: المنطقة الصناعية الثانية، الرياض
+
+---
+
+Made with ❤️ in Saudi Arabia 🇸🇦
