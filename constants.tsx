@@ -42,11 +42,11 @@ export const PRODUCTS: Product[] = [
   },
   {
     id: 3,
-    title: 'Flexible Duct',
-    description: 'دكت مرن غير معزول لأنظمة التهوية والتكييف سهل التركيب والصيانة.',
-    category: 'HVAC',
+    title: 'Insulated Pipes',
+    description: 'مواسير عزل جاهزة بأقطار مختلفة لحماية شبكات التكييف والمياه بكفاءة عالية.',
+    category: 'عزل مواسير',
     images: [
-      'https://i.pinimg.com/1200x/0a/78/ab/0a78abe6e0e5abcb1d33bc87387b73ac.jpg'
+      'https://i.postimg.cc/RCgyX3bT/Whats-App-Image-2025-12-04-at-08-45-48-2a454836.jpg'
     ]
   },
   {
@@ -74,6 +74,15 @@ export const PRODUCTS: Product[] = [
     category: 'عزل صوتي',
     images: [
       'https://i.postimg.cc/rFGZ0DXQ/Whats-App-Image-2025-12-02-at-20-53-52-920f2521.jpg'
+    ]
+  },
+  {
+    id: 7,
+    title: 'Accessories',
+    description: 'جميع مستلزمات وإكسسوارات التركيب من أشرطة لاصقة ومواد تثبيت وسيليكون.',
+    category: 'إكسسوارات',
+    images: [
+      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop&q=80'
     ]
   }
 ];
