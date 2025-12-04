@@ -8,13 +8,19 @@ import WhyUs from './components/WhyUs';
 import Brands from './components/Brands';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import WhatsAppButton from './components/WhatsAppButton';
 import CatalogPage from './pages/CatalogPage';
+import ProductPage from './pages/ProductPage';
 
 function App() {
   const path = window.location.pathname;
   
   if (path === '/catalog') {
     return <CatalogPage />;
+  }
+  
+  if (path.startsWith('/product/')) {
+    return <ProductPage />;
   }
   
   return (
@@ -30,6 +36,7 @@ function App() {
         <Contact />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 }

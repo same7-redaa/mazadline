@@ -4,6 +4,7 @@ import { ChevronLeft, ChevronRight, Grid3x3, List } from 'lucide-react';
 import RevealOnScroll from '../components/RevealOnScroll';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
+import WhatsAppButton from '../components/WhatsAppButton';
 import { Product } from '../types';
 
 type ViewMode = 'grid' | 'list';
@@ -251,6 +252,7 @@ const CatalogPage: React.FC = () => {
       </div>
       
       <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
