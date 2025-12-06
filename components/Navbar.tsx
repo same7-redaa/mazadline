@@ -15,30 +15,35 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md py-4`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md py-2`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
             <img 
                 src="/logo.png" 
                 alt="MAZAD LINE" 
-                className="h-12 md:h-16 w-auto object-contain" 
+                className="h-10 md:h-12 w-auto object-contain" 
             />
         </a>
 
         {/* Desktop Menu */}
         <div className="hidden md:flex items-center space-x-8 space-x-reverse">
-          {NAV_LINKS.map((link) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              className="text-gray-700 hover:text-brand-orange font-medium transition-colors"
-            >
-              {link.name}
-            </a>
-          ))}
+          {NAV_LINKS.map((link) => {
+            const isHomePage = window.location.pathname === '/';
+            const href = isHomePage ? link.href : `/${link.href}`;
+            
+            return (
+              <a 
+                key={link.name} 
+                href={href}
+                className="text-gray-700 hover:text-brand-orange font-medium transition-colors"
+              >
+                {link.name}
+              </a>
+            );
+          })}
           <a 
-            href="#contact"
+            href={window.location.pathname === '/' ? '#contact' : '/#contact'}
             className="bg-brand-orange text-white px-6 py-2 rounded-full font-bold hover:bg-orange-600 transition-transform transform hover:scale-105"
           >
             اطلب عرض سعر
@@ -62,21 +67,26 @@ const Navbar: React.FC = () => {
         <div className={`flex flex-col p-6 space-y-4 transform transition-transform duration-300 ${
           isOpen ? 'translate-y-0' : '-translate-y-4'
         }`}>
-          {NAV_LINKS.map((link, index) => (
-            <a 
-              key={link.name} 
-              href={link.href}
-              className={`text-gray-700 hover:text-brand-orange font-medium text-lg transition-all duration-300 ${
-                isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
-              }`}
-              style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
-              onClick={() => setIsOpen(false)}
-            >
-              {link.name}
-            </a>
-          ))}
+          {NAV_LINKS.map((link, index) => {
+            const isHomePage = window.location.pathname === '/';
+            const href = isHomePage ? link.href : `/${link.href}`;
+            
+            return (
+              <a 
+                key={link.name} 
+                href={href}
+                className={`text-gray-700 hover:text-brand-orange font-medium text-lg transition-all duration-300 ${
+                  isOpen ? 'opacity-100 translate-x-0' : 'opacity-0 translate-x-4'
+                }`}
+                style={{ transitionDelay: isOpen ? `${index * 50}ms` : '0ms' }}
+                onClick={() => setIsOpen(false)}
+              >
+                {link.name}
+              </a>
+            );
+          })}
           <a 
-            href="#contact"
+            href={window.location.pathname === '/' ? '#contact' : '/#contact'}
             className={`bg-brand-orange text-center text-white px-6 py-3 font-bold transition-all duration-300 ${
               isOpen ? 'opacity-100 scale-100' : 'opacity-0 scale-95'
             }`}

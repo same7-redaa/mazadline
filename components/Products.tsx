@@ -6,7 +6,7 @@ import { ArrowLeft } from 'lucide-react';
 
 const ProductCard = ({ product }: { product: Product }) => {
   const handleClick = () => {
-    window.location.href = `/product/${product.id}`;
+    window.location.href = `/product/${product.slug}`;
   };
 
   return (

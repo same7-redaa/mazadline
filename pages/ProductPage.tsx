@@ -6,8 +6,18 @@ import WhatsAppButton from '../components/WhatsAppButton';
 import { ArrowRight, Package, ShieldCheck, Truck } from 'lucide-react';
 
 const ProductPage: React.FC = () => {
-  const productId = parseInt(window.location.pathname.split('/').pop() || '1');
-  const product = PRODUCTS.find(p => p.id === productId);
+  const slug = window.location.pathname.split('/').pop() || '';
+  const product = PRODUCTS.find(p => p.slug === slug);
+
+  // Update page title
+  React.useEffect(() => {
+    if (product) {
+      document.title = `${product.title} | مزاد لاين`;
+    }
+    return () => {
+      document.title = 'MAZAD LINE | مزاد لاين';
+    };
+  }, [product]);
 
   if (!product) {
     return (
@@ -27,7 +37,7 @@ const ProductPage: React.FC = () => {
       <Navbar />
       
       {/* Spacer for fixed navbar */}
-      <div className="h-20"></div>
+      <div className="h-24"></div>
       
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4 border-b border-gray-200">
@@ -1557,10 +1567,10 @@ const ProductPage: React.FC = () => {
           <h2 className="text-2xl sm:text-3xl font-extrabold text-brand-dark mb-8 text-center">منتجات ذات صلة</h2>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {PRODUCTS.filter(p => p.id !== productId).slice(0, 3).map((relatedProduct) => (
+            {PRODUCTS.filter(p => p.slug !== slug).slice(0, 3).map((relatedProduct) => (
               <a 
                 key={relatedProduct.id}
-                href={`/product/${relatedProduct.id}`}
+                href={`/product/${relatedProduct.slug}`}
                 className="group bg-white overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-200"
               >
                 <div className="relative h-48 bg-gray-50 overflow-hidden">

@@ -3,6 +3,7 @@ import { LucideIcon } from 'lucide-react';
 export interface Product {
   id: number;
   title: string;
+  slug: string;
   description: string;
   category: string;
   images: string[];

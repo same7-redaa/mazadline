@@ -19,6 +19,7 @@ function App() {
     return <CatalogPage />;
   }
   
+  // Support both slug-based and ID-based URLs for products
   if (path.startsWith('/product/')) {
     return <ProductPage />;
   }

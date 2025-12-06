@@ -23,17 +23,9 @@ export const NAV_LINKS = [
 
 export const PRODUCTS: Product[] = [
   {
-    id: 1,
-    title: 'Insulated Flexible Duct',
-    description: 'مجاري هواء مرنة معزولة بالألومنيوم لأنظمة التكييف والتهوية بكفاءة عالية.',
-    category: 'HVAC',
-    images: [
-      'https://i.pinimg.com/1200x/0a/78/ab/0a78abe6e0e5abcb1d33bc87387b73ac.jpg'
-    ]
-  },
-  {
     id: 2,
     title: 'Fiber Glass',
+    slug: 'fiber-glass',
     description: 'لفائف وألواح الفايبر جلاس عالية الكثافة للعزل الحراري والصوتي بجودة فائقة.',
     category: 'عزل حراري',
     images: [
@@ -43,6 +35,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 3,
     title: 'Insulated Pipes',
+    slug: 'insulated-pipes',
     description: 'مواسير عزل جاهزة بأقطار مختلفة لحماية شبكات التكييف والمياه بكفاءة عالية.',
     category: 'عزل مواسير',
     images: [
@@ -52,6 +45,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 4,
     title: 'Armaflex',
+    slug: 'armaflex',
     description: 'عزل مطاطي مرن من أرمافليكس لحماية الأنابيب والقنوات ومنع التكثف بكفاءة عالية.',
     category: 'عزل مطاطي',
     images: [
@@ -61,6 +55,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 5,
     title: 'عزل صخري Rockwool',
+    slug: 'rockwool',
     description: 'ألواح الصوف الصخري المقاومة للحريق والحرارة العالية للمباني الصناعية والتجارية.',
     category: 'عزل صخري',
     images: [
@@ -70,6 +65,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 6,
     title: 'عزل صوت',
+    slug: 'acoustic-foam',
     description: 'حلول العزل الصوتي المتقدمة لتقليل الضوضاء في المباني السكنية والتجارية.',
     category: 'عزل صوتي',
     images: [
@@ -77,8 +73,19 @@ export const PRODUCTS: Product[] = [
     ]
   },
   {
+    id: 1,
+    title: 'Insulated Flexible Duct',
+    slug: 'insulated-flexible-duct',
+    description: 'مجاري هواء مرنة معزولة بالألومنيوم لأنظمة التكييف والتهوية بكفاءة عالية.',
+    category: 'HVAC',
+    images: [
+      'https://i.pinimg.com/1200x/0a/78/ab/0a78abe6e0e5abcb1d33bc87387b73ac.jpg'
+    ]
+  },
+  {
     id: 7,
     title: 'Accessories',
+    slug: 'accessories',
     description: 'جميع مستلزمات وإكسسوارات التركيب من أشرطة لاصقة ومواد تثبيت وسيليكون.',
     category: 'إكسسوارات',
     images: [

@@ -3,7 +3,7 @@ import RevealOnScroll from './RevealOnScroll';
 
 // Using text placeholders styled to look like premium corporate logos
 const BRANDS_LIST = [
-  'K-FLEX', 'AEROFOAM', 'KIMMCO', 'KNAUF', 'ROCKWOOL', 'AFICO'
+  'Izocam', 'Kimmico', 'Glassrock', 'Rockal', 'K-flex', 'Technometal'
 ];
 
 const Brands: React.FC = () => {

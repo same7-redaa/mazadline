@@ -14,12 +14,18 @@ const ProductCard = ({ product, viewMode }: { product: Product; viewMode: ViewMo
 
   const nextImage = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setCurrentImageIndex((prev) => (prev + 1) % product.images.length);
   };
 
   const prevImage = (e: React.MouseEvent) => {
     e.preventDefault();
+    e.stopPropagation();
     setCurrentImageIndex((prev) => (prev - 1 + product.images.length) % product.images.length);
+  };
+
+  const handleClick = () => {
+    window.location.href = `/product/${product.slug}`;
   };
 
   if (viewMode === 'list') {
@@ -88,9 +94,12 @@ const ProductCard = ({ product, viewMode }: { product: Product; viewMode: ViewMo
             >
               طلب عرض سعر
             </a>
-            <button className="border border-gray-300 text-gray-700 px-6 py-2.5 rounded-lg font-semibold text-sm hover:border-brand-orange hover:text-brand-orange transition-colors">
+            <a 
+              href={`/product/${product.slug}`}
+              className="border border-gray-300 text-gray-700 px-6 py-2.5 rounded-lg font-semibold text-sm hover:border-brand-orange hover:text-brand-orange transition-colors"
+            >
               المزيد من التفاصيل
-            </button>
+            </a>
           </div>
         </div>
       </div>
@@ -99,7 +108,10 @@ const ProductCard = ({ product, viewMode }: { product: Product; viewMode: ViewMo
 
   // Grid View
   return (
-    <div className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full">
+    <div 
+      onClick={handleClick}
+      className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100 flex flex-col h-full cursor-pointer"
+    >
       {/* Image Carousel */}
       <div className="relative h-64 bg-gray-50">
         <img 
@@ -156,12 +168,9 @@ const ProductCard = ({ product, viewMode }: { product: Product; viewMode: ViewMo
         <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-1">
           {product.description}
         </p>
-        <a 
-          href="/#contact" 
-          className="bg-brand-dark text-white px-6 py-2.5 rounded-lg font-semibold text-sm hover:bg-brand-orange transition-colors text-center"
-        >
-          طلب عرض سعر
-        </a>
+        <span className="bg-brand-dark text-white px-6 py-2.5 rounded-lg font-semibold text-sm group-hover:bg-brand-orange transition-colors text-center block">
+          عرض التفاصيل
+        </span>
       </div>
     </div>
   );
@@ -169,6 +178,13 @@ const ProductCard = ({ product, viewMode }: { product: Product; viewMode: ViewMo
 
 const CatalogPage: React.FC = () => {
   const [viewMode, setViewMode] = useState<ViewMode>('grid');
+
+  React.useEffect(() => {
+    document.title = 'كتالوج المنتجات | مزاد لاين';
+    return () => {
+      document.title = 'مزاد لاين | حلول العزل الحراري والصوتي HVAC';
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
