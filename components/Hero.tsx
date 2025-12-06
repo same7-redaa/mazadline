@@ -46,7 +46,9 @@ const Hero: React.FC = () => {
                 <ArrowRight className="w-5 h-5 group-hover:-translate-x-1 transition-transform text-brand-orange" />
               </a>
               <a 
-                href="#contact" 
+                href="https://wa.me/2001120746804?text=مرحباً، أريد طلب عرض سعر لمنتجاتكم" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="group bg-transparent text-brand-dark border border-gray-300 px-6 sm:px-8 py-3 sm:py-4 font-bold text-base sm:text-lg hover:border-brand-orange hover:text-brand-orange transition-colors flex items-center justify-center gap-2"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -71,7 +73,7 @@ const Hero: React.FC = () => {
                 style={{ clipPath: 'polygon(15% 0, 100% 0, 100% 100%, 0% 100%)' }}
               >
                 <img 
-                  src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=1600&auto=format&fit=crop" 
+                  src="/hero-image.jpg" 
                   alt="Industrial Insulation" 
                   className="w-full h-full object-cover opacity-80 hover:scale-105 transition-transform duration-700"
                 />
@@ -83,7 +85,7 @@ const Hero: React.FC = () => {
         {/* Mobile Image Fallback */}
         <div className="w-full h-64 lg:hidden relative mt-8 overflow-hidden rounded-lg">
            <img 
-              src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?q=80&w=800&auto=format&fit=crop" 
+              src="/hero-image.jpg" 
               alt="Industrial Insulation" 
               className="w-full h-full object-cover"
             />

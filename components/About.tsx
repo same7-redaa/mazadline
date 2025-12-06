@@ -13,7 +13,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="relative overflow-hidden shadow-2xl">
                  <img 
-                  src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?q=80&w=600&auto=format&fit=crop" 
+                  src="/about-image.jpg" 
                   alt="About Mazad Line" 
                   className="w-full h-[500px] object-cover"
                 />

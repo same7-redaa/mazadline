@@ -1,7 +1,8 @@
 import React from 'react';
+import { CONTACT_INFO } from '../constants';
 
 const WhatsAppButton: React.FC = () => {
-  const phoneNumber = '966123456789'; // رقم الواتساب
+  const phoneNumber = '2001120746804'; // رقم الواتساب المصري
   const message = 'مرحباً، أريد الاستفسار عن منتجاتكم';
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

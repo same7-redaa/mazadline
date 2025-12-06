@@ -15,16 +15,14 @@ const Navbar: React.FC = () => {
   }, []);
 
   return (
-    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-sm shadow-md' : 'bg-transparent'
-    } py-4`}>
+    <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md py-4`}>
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
             <img 
                 src="/logo.png" 
                 alt="MAZAD LINE" 
-                className="h-8 md:h-10 w-auto object-contain" 
+                className="h-12 md:h-16 w-auto object-contain" 
             />
         </a>
 

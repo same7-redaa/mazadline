@@ -82,7 +82,7 @@ export const PRODUCTS: Product[] = [
     description: 'جميع مستلزمات وإكسسوارات التركيب من أشرطة لاصقة ومواد تثبيت وسيليكون.',
     category: 'إكسسوارات',
     images: [
-      'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?w=800&h=600&fit=crop&q=80'
+      '/accessories.jpg'
     ]
   }
 ];
@@ -129,7 +129,12 @@ export const REASONS: Reason[] = [
 ];
 
 export const CONTACT_INFO = {
-  phone: '+966 12 345 6789',
+  phones: [
+    { number: '01120746804', whatsapp: 'https://wa.me/2001120746804' },
+    { number: '01050157922', whatsapp: 'https://wa.me/2001050157922' },
+    { number: '01021219166', whatsapp: 'https://wa.me/2001021219166' }
+  ],
   email: 'sales@mazadline.com',
-  address: 'المنطقة الصناعية الثانية، الرياض، المملكة العربية السعودية'
+  mainOffice: 'المعادي – شارع 306 – القاهرة، مصر',
+  warehouse: 'باسوس – نزلة باسوس من طريق الراعي – بالقرب من شركة الكهرباء – القليوبية، مصر'
 };

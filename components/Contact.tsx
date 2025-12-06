@@ -22,11 +22,31 @@ const Contact: React.FC = () => {
                   <div className="w-12 h-12 bg-gray-100 flex items-center justify-center text-brand-orange flex-shrink-0">
                     <Phone size={24} />
                   </div>
-                  <div>
-                    <h5 className="font-bold text-gray-900 text-lg mb-1">الهاتف</h5>
-                    <p className="text-gray-600 font-medium ltr" style={{ direction: 'ltr', textAlign: 'right' }}>
-                      {CONTACT_INFO.phone}
-                    </p>
+                  <div className="flex-1">
+                    <h5 className="font-bold text-gray-900 text-lg mb-3">أرقام التواصل</h5>
+                    <div className="space-y-2">
+                      {CONTACT_INFO.phones.map((phone, index) => (
+                        <div key={index} className="flex items-center gap-3">
+                          <p className="text-gray-600 font-medium ltr" style={{ direction: 'ltr', textAlign: 'right' }}>
+                            {phone.number}
+                          </p>
+                          <a 
+                            href={phone.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="bg-green-500 hover:bg-green-600 text-white text-xs px-3 py-1 transition-colors flex items-center gap-1"
+                          >
+                            واتساب
+                          </a>
+                          <a 
+                            href={`tel:+2${phone.number}`}
+                            className="bg-brand-orange hover:bg-orange-600 text-white text-xs px-3 py-1 transition-colors"
+                          >
+                            اتصال
+                          </a>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
@@ -45,18 +65,34 @@ const Contact: React.FC = () => {
                     <MapPin size={24} />
                   </div>
                   <div>
-                    <h5 className="font-bold text-gray-900 text-lg mb-1">العنوان</h5>
-                    <p className="text-gray-600 font-medium leading-relaxed">
-                      {CONTACT_INFO.address}
-                    </p>
+                    <h5 className="font-bold text-gray-900 text-lg mb-3">العناوين</h5>
+                    <div className="space-y-3">
+                      <div>
+                        <p className="font-bold text-brand-orange text-sm mb-1">المقر الإداري</p>
+                        <p className="text-gray-600 font-medium leading-relaxed text-sm">
+                          {CONTACT_INFO.mainOffice}
+                        </p>
+                      </div>
+                      <div>
+                        <p className="font-bold text-brand-orange text-sm mb-1">المخازن</p>
+                        <p className="text-gray-600 font-medium leading-relaxed text-sm">
+                          {CONTACT_INFO.warehouse}
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
-              <button className="w-full bg-brand-orange text-white py-4 font-bold text-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-3 shadow-xl">
+              <a 
+                href={CONTACT_INFO.phones[0].whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full bg-brand-orange text-white py-4 font-bold text-lg hover:bg-orange-700 transition-colors flex items-center justify-center gap-3 shadow-xl"
+              >
                 <Send size={20} />
                 أرسل رسالة واتساب مباشرة
-              </button>
+              </a>
             </div>
           </RevealOnScroll>
 
