@@ -22,7 +22,7 @@ const Navbar: React.FC = () => {
             <img 
                 src="/logo.jpeg" 
                 alt="MAZAD LINE" 
-                className="h-16 md:h-20 w-auto object-contain" 
+                className="h-12 md:h-16 w-auto object-contain" 
             />
         </a>
 
