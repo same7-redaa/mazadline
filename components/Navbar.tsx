@@ -20,7 +20,7 @@ const Navbar: React.FC = () => {
         {/* Logo */}
         <a href="/" className="flex items-center gap-2">
             <img 
-                src="/logo.png" 
+                src="/logo.jpeg" 
                 alt="MAZAD LINE" 
                 className="h-10 md:h-12 w-auto object-contain" 
             />
